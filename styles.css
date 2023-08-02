@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Main: hsl(217, 54%, 11%);
+    --Card: hsl(216, 50%, 16%);
+    --Lne: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}   
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Main);
+}
+
+.card-principal{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 650px;
+    background: var(--Card);
+    border-radius: 30px;
+    padding: 20px;
+   
+}
+
+.img-container{
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: var(--Cyan);
+    opacity: 0.9;
+}
+
+.img-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: background 0.3s;
+
+}
+
+
+
+.avatar-section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.avatar-section img{
+    width: auto;
+    height: 40px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.score-section{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-izq,
+.container-drch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container-izq svg,
+.container-drch svg{
+    margin-right: 20px;
+}
+
+.container-izq h3{
+    color: var(--Cyan)
+}
+
+.container-drch{
+    color: var(--Soft-blue);
+}
+
+p{
+    color: var(--Soft-blue);
+}
+
+.txt{
+    line-height: 2;
+    letter-spacing: 1.5px;
+    word-spacing: 4.5px;
+    margin-bottom: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    display: inline;
+}
+
+h1:hover,a:hover{
+    color: var(--Cyan);
+}
+
+.enlace-img:hover{
+   
+    opacity: 0.3;
+}
+
+.enlace-img::after{
+    content: url(/images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -310%);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.enlace-img:hover::after{
+
+    opacity: 1;
+}
+
+
+
+#name-enlace{
+    margin-left: 5px;
+}
+
+hr{
+    border: none;
+    border-top:2px solid var(--Lne) ;
+    margin-bottom: 30px;
+}
+
+
+
+h1{
+    color: var(--White);
+    margin-bottom:20px ;
+}
+
+
+.attribution { 
+    color: var(--Soft-blue);
+    font-size: 15px; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
